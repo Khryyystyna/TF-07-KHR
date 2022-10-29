@@ -9,5 +9,4 @@ export const getMovie = async () => {
   return data;
 };
 
-
-
+export const ApiImg = "http://image.tmdb.org/t/p/w780/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg";

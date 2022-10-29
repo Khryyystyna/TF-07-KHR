@@ -1,6 +1,7 @@
 
 import * as API from './js/API';
 import { createMarkupTrend } from './js/createMarkupTrend';
+import * as genres from './js/genres.json';
 
 
 const refs = {
@@ -8,15 +9,15 @@ const refs = {
 };
 
 async function getTrending() {
-  try {
-    const { results } = await API.getMovie();
-    console.log(results);
-    const markup = createMarkupTrend(results);
-    // console.log(markup);
-    refs.trend.insertAdjacentHTML('beforeend', markup);
-  } catch (error) {
+    try {
+        const { results } = await API.getMovie();
+        console.log(results);
+        const markup = createMarkupTrend(results);
+        // console.log(markup);
+        refs.trend.insertAdjacentHTML('beforeend', markup);
+    } catch (error) {
     console.log(error);
-  }
+    }
 }
 
 getTrending();

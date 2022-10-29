@@ -1,9 +1,9 @@
 export function createMarkupTrend(film) {
-    return film.map(({ poster_path, title, genre_ids, release_date, popularity }) => 
-        `<li class="film-gallery__item list">
+  return film.map(({ poster_path, title, genre_ids, release_date, popularity }) => {
+    return `<li class="film-gallery__item list">
               <a href="http://">
                 <img
-                  src="${poster_path}"
+                  src='${poster_path}'
                   alt="${title}"
                   width="394"
                   height="634"
@@ -13,11 +13,11 @@ export function createMarkupTrend(film) {
                 <h2>${title}</h2>
               </div>
               <div class="film__wrapper">
-                <p class="${genre_ids}">Drama, Action</p>
+                <p class="film__genre">${genre_ids}</p>
                 <p class="film__line">|</p>
-                <p class="${release_date}">2020</p>
-                <p class="${popularity} is-hidden">7.98</p>
+                <p class="film__relise">${release_date}</p>
+                <p class="film__rating is-hidden">${popularity}</p>
               </div>
-            </li>`).join('');
+            </li>`}).join('');
 }
 
