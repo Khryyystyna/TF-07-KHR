@@ -1,6 +1,6 @@
-export function createMarkup(film) {
-    return film.map(({ poster_path, title, genre_ids, release_date, popularity }) => {
-        return `<li class="film-gallery__item list">
+export function createMarkupTrend(film) {
+    return film.map(({ poster_path, title, genre_ids, release_date, popularity }) => 
+        `<li class="film-gallery__item list">
               <a href="http://">
                 <img
                   src="${poster_path}"
@@ -18,6 +18,6 @@ export function createMarkup(film) {
                 <p class="${release_date}">2020</p>
                 <p class="${popularity} is-hidden">7.98</p>
               </div>
-            </li>`}).join('');
+            </li>`).join('');
 }
 

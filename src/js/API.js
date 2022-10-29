@@ -9,3 +9,5 @@ export const getMovie = async () => {
   return data;
 };
 
+
+
