@@ -4,7 +4,7 @@ import { createMarkupTrend } from './js/createMarkupTrend';
 
 
 const refs = {
-  trend: document.querySelector('film-gallery__list'),
+  trend: document.querySelector('.film-gallery__list'),
 };
 
 async function getTrending() {
@@ -12,7 +12,7 @@ async function getTrending() {
     const { results } = await API.getMovie();
     console.log(results);
     const markup = createMarkupTrend(results);
-    console.log(markup);
+    // console.log(markup);
     refs.trend.insertAdjacentHTML('beforeend', markup);
   } catch (error) {
     console.log(error);
